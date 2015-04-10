@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "An isomorphic javascript web framework.",
   "main": "index.js",
-  "repository": 
+  "repository": {
     "type": "git",
     "url": "git@github.com:entanglejs/entangle.git"
   },
