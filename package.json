@@ -1,0 +1,39 @@
+{
+  "name": "entangle",
+  "version": "0.0.1",
+  "description": "An isomorphic javascript web framework.",
+  "main": "index.js",
+  "repository": 
+    "type": "git",
+    "url": "git@github.com:entanglejs/entangle.git"
+  },
+  "author": "Edwin Fuquen <efuquen@gmail.com>",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "lodash": "3.6.0",
+    "config": "1.12.0",
+    "toml": "2.2.0",
+    "toml-require": "1.0.1",
+    "express": "4.12.3",
+    "compression": "1.4.3",
+    "fs-readfile-promise": "1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "3.8.11",
+    "gulp-babel": "5.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "keywords": [
+    "mithril",
+    "express",
+    "entangle",
+    "entanglejs",
+    "isomorphic"
+  ],
+  "jscsConfig": {
+    "preset": "airbnb",
+    "esnext": true
+  }
+}
