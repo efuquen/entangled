@@ -1,11 +1,11 @@
 {
-  "name": "entangle",
+  "name": "entangled",
   "version": "0.0.1",
   "description": "An isomorphic javascript web framework.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:entanglejs/entangle.git"
+    "url": "git@github.com:efuquen/entangled.git"
   },
   "author": "Edwin Fuquen <efuquen@gmail.com>",
   "license": "Apache 2.0",
@@ -35,5 +35,12 @@
   "jscsConfig": {
     "preset": "airbnb",
     "esnext": true
+  },
+  "bugs": {
+    "url": "https://github.com/efuquen/entangled/issues"
+  },
+  "homepage": "https://github.com/efuquen/entangled",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
