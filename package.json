@@ -1,6 +1,6 @@
 {
   "name": "entangled",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An isomorphic javascript web framework.",
   "main": "index.js",
   "repository": {
@@ -28,8 +28,8 @@
   "keywords": [
     "mithril",
     "express",
-    "entangle",
-    "entanglejs",
+    "entangled",
+    "entangledjs",
     "isomorphic"
   ],
   "jscsConfig": {

@@ -14,9 +14,9 @@ require('toml-require').install();
 var init = function(opts) {
   initConfig(opts);
 
-  class Entangle {
+  class Entangled {
     constructor() {
-      this.cfg = config.get('entangle');
+      this.cfg = config.get('entangled');
       this.app = initExpress(this.cfg.express, opts);
     }
 
@@ -27,13 +27,13 @@ var init = function(opts) {
     }
   }
 
-  return new Entangle();
+  return new Entangled();
 }
 
 function initConfig(opts) {
-  const defaultCfgs = require('../config/default.toml').entangle;
+  const defaultCfgs = require('../config/default.toml').entangled;
   config.util.extendDeep(defaultCfgs, opts);
-  config.util.setModuleDefaults('entangle', defaultCfgs);
+  config.util.setModuleDefaults('entangled', defaultCfgs);
 }
 
 function initExpress(cfg, opts) {

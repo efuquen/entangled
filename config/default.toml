@@ -1,11 +1,11 @@
-[entangle]
+[entangled]
 
-[entangle.express]
+[entangled.express]
 port = 3000
 
-[entangle.express.compression]
+[entangled.express.compression]
 enable = true
 
 #Root is defined, options can be overriden by key here
-[entangle.express.static]
+[entangled.express.static]
 dirs = ["./assets/public"]

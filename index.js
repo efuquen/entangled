@@ -1,1 +1,1 @@
-module.exports = require('./lib/entangle');
+module.exports = require('./lib/entangled');
