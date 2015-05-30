@@ -1,11 +1,12 @@
 process.env.SUPPRESS_NO_CONFIG_WARNING = 'y';
-const config  = require('config');
-const toml    = require('toml');
-const express = require('express');
-const _       = require('lodash');
-const render  = require('mithril-node-render');
-const util    = require('util');
-const readFile = require('fs-readfile-promise');
+const config     = require('config');
+const toml       = require('toml');
+const express    = require('express');
+const _          = require('lodash');
+const render     = require('mithril-node-render');
+const util       = require('util');
+const readFile   = require('fs-readfile-promise');
+const bodyParser = require('body-parser');
 
 const EventEmitter = require('events').EventEmitter;
 
@@ -53,6 +54,18 @@ function initExpress(cfg, opts) {
       const options = _.merge({}, globalOptions, indexOptions);
       app.use(express.static(dir, options));
     });
+  }
+
+  if (cfg.body) {
+    console.log('body parser');
+    if (cfg.body.json && !cfg.body.json.disable) {
+      console.log('enable json parser');
+      app.use(bodyParser.json());
+    }
+
+    if (cfg.body.form && !cfg.body.form.disable) {
+      app.use(bodyParser.urlencoded());
+    }
   }
 
   return app;

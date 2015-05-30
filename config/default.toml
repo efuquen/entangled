@@ -9,3 +9,7 @@ enable = true
 #Root is defined, options can be overriden by key here
 [entangled.express.static]
 dirs = ["./assets/public"]
+
+[entangled.express.body]
+json = true
+form = true
