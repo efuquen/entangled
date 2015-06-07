@@ -13,3 +13,6 @@ dirs = ["./assets/public"]
 [entangled.express.body]
 json = true
 form = true
+
+[entangled.express.cookie]
+secret = "JDWyQyxrz1oa1GOicQq4UcxCXu8NtGQ9"

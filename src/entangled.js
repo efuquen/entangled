@@ -7,6 +7,7 @@ const render     = require('mithril-node-render');
 const util       = require('util');
 const readFile   = require('fs-readfile-promise');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const EventEmitter = require('events').EventEmitter;
 
@@ -57,14 +58,23 @@ function initExpress(cfg, opts) {
   }
 
   if (cfg.body) {
-    console.log('body parser');
     if (cfg.body.json && !cfg.body.json.disable) {
-      console.log('enable json parser');
       app.use(bodyParser.json());
     }
 
     if (cfg.body.form && !cfg.body.form.disable) {
       app.use(bodyParser.urlencoded());
+    }
+  }
+
+  if (cfg.cookie) {
+    if (!cfg.cookie.disable) {
+      console.log("enable cookie-parser")
+      if (cfg.cookie.secret) {
+        app.use(cookieParser(cfg.cookie.secret));
+      } else {
+        app.use(cookieParser());
+      }
     }
   }
 
